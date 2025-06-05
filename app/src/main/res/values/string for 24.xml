@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stringFor24">
+        <item name="et_inch">Дюйм</item>
+        <item name="et_yard">Ярд</item>
+        <item name="et_foot">фут</item>
+        <item name="et_mile">Миля</item>
+        <item name="et_yottametre">Иотгаметр</item>
+        <item name="et_zettametre">Зеттаметр</item>
+        <item name="et_exametre">Эксаметр</item>
+        <item name="et_petametre">Петаметр</item>
+        <item name="et_terametre">Тераметр</item>
+        <item name="et_gigametre">Гигаметр</item>
+        <item name="et_megametre">Мегаметр</item>
+        <item name="et_kilometre">Километр</item>
+        <item name="et_hectometre">Гектометр</item>
+        <item name="et_decametre">Декаметр</item>
+        <item name="et_metre">Метр</item>
+        <item name="et_decimetre">Дециметр</item>
+        <item name="et_centimetre">Сантиметр</item>
+        <item name="et_millimetre">Миллиметр</item>
+        <item name="et_micrometre">Микрометр</item>
+        <item name="et_nanometre">Нанометр</item>
+        <item name="et_picometre">Пикометр</item>
+        <item name="et_femtometre">фемтометр</item>
+        <item name="et_attometre">Аттометр</item>
+        <item name="et_zeptometre">Зептометр</item>
+        <item name="et_yoctometre">Иоктометр</item>
+    </string-array>
+</resources>

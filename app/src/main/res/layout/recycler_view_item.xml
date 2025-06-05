@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Layout"
+    android:background="@drawable/shape_rounded_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="1dp">
+    <TextView
+        android:id="@+id/tvFirstText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        tools:text="Текст побольше"
+        android:paddingStart="5dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Текст поменьше"
+        android:paddingStart="5dp"
+        android:id="@+id/tvSecondText"/>
+
+</LinearLayout>

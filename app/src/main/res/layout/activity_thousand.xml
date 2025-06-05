@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThousandActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/thousand"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnToStandartDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Стандартное всплывающее окошко"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tvAnswerFromDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ответ из кнопки сверху"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnToStandartDialog" />
+
+    <Button
+        android:id="@+id/btnToDialogWithRadioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Окошко с радио кнопками"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAnswerFromDialog" />
+
+    <Button
+        android:id="@+id/btnToDialogWithFLags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Окошко с флажками"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnToDialogWithRadioButtons" />
+
+    <Button
+        android:id="@+id/btnToTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Окошко с выбором времени"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnToDialogWithFLags" />
+
+    <Button
+        android:id="@+id/btnToChoosePlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор игроков"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnToTimePicker" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnToChoosePlayers"
+        tools:layout_height="100dp"
+        tools:layout_width="100dp">
+        <!-- Сюда нужно добавить три варианта разметки под 2,3,4 игроков соответсвенно-->
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

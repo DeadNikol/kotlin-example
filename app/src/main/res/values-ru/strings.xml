@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Тест всех функций</string>
+    <string name="button_continue">Продолжить</string>
+    <string name="galaxy">Галактика</string>
+    <string name="option_destroy">Сломать</string>
+    <string name="option_galaxy">Галактика</string>
+    <string name="option_utug">Утюг</string>
+    <string name="option_sleep">Сон</string>
+    <string name="thousand">Карточная игра "Тысяча"</string>
+</resources>

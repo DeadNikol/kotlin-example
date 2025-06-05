@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestFragmentActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/TextHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="В этой активности тестируется работа фрагментов. Это оказалось чуть сложнее, чем я надеялся. Посему тут до кучи ListView лежит."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/flFirstFragment"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:background="#E6C5E3">
+
+    </FrameLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.myapplication.BlankFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/flFirstFragment"
+        app:layout_constraintLeft_toLeftOf="@id/flFirstFragment"
+        app:layout_constraintRight_toRightOf="@id/flFirstFragment"
+        android:layout_marginTop="150dp"
+        tools:layout_width="100dp"
+        tools:layout_height="100dp"
+        tools:background="#E6C5E3"  />
+
+    <ListView
+        android:id="@+id/lv1"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/fragmentContainerView"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

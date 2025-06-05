@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fragmentNavVersion2_1"
+            android:title="Фрагмент 1"
+            android:icon="@android:drawable/ic_media_play"/>
+        <item
+            android:id="@+id/fragmentNavVersion2_2"
+            android:title="Фрагмент 2"
+            android:icon="@android:drawable/ic_media_play"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fragmentNavVersion2_3"
+            android:title="Фрагмент 3"
+            android:icon="@android:drawable/ic_media_play"/>
+        <item
+            android:id="@+id/fragmentNavVersion2_4"
+            android:title="Фрагмент 4"
+            android:icon="@android:drawable/ic_media_play"/>
+    </group>
+</menu>

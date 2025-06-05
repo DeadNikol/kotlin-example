@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_draph"
+    app:startDestination="@id/navFragment">
+
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.example.myapplication.NavFragment"
+        android:label="fragment_nav"
+        tools:layout="@layout/fragment_nav" >
+        <action
+            android:id="@+id/action_navFragment_to_navFragment2"
+            app:destination="@id/navFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navFragment2"
+        android:name="com.example.myapplication.NavFragment2"
+        android:label="fragment_nav2"
+        tools:layout="@layout/fragment_nav2" >
+        <argument
+            android:name="MyArg"
+            android:defaultValue="Noname" />
+        <action
+            android:id="@+id/action_navFragment2_to_navFragment"
+            app:destination="@id/navFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopListFragment"
+        android:name="com.example.myapplication.ShopListFragment"
+        android:label="Список покупок"
+        tools:layout="@layout/fragment_shop_list" />
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.myapplication.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.myapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+</navigation>

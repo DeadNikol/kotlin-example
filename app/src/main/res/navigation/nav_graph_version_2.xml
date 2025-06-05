@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_version_2"
+    app:startDestination="@id/fragmentNavVersion2_1">
+
+    <fragment
+        android:id="@+id/fragmentNavVersion2_1"
+        android:name="com.example.myapplication.NavActivityVersion2.FragmentNavVersion2_1"
+        android:label="Фрагмент 1"
+        tools:layout="@layout/fragment_nav_version2_1" >
+        <action
+            android:id="@+id/action_fragmentNavVersion2_1_to_fragmentNavVersion2_2"
+            app:destination="@id/fragmentNavVersion2_2" />
+        <action
+            android:id="@+id/action_fragmentNavVersion2_1_to_fragmentNavVersion2_3"
+            app:destination="@id/fragmentNavVersion2_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNavVersion2_2"
+        android:name="com.example.myapplication.NavActivityVersion2.FragmentNavVersion2_2"
+        android:label="Фрагмент 2"
+        tools:layout="@layout/fragment_nav_version2_2" />
+    <fragment
+        android:id="@+id/fragmentNavVersion2_3"
+        android:name="com.example.myapplication.NavActivityVersion2.FragmentNavVersion2_3"
+        android:label="Фрагмент 3"
+        tools:layout="@layout/fragment_nav_version2_3" />
+    <fragment
+        android:id="@+id/fragmentNavVersion2_4"
+        android:name="com.example.myapplication.NavActivityVersion2.FragmentNavVersion2_4"
+        android:label="Фрагмент 4"
+        tools:layout="@layout/fragment_nav_version2_4" />
+</navigation>
