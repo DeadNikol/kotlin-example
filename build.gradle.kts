@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     id("com.google.devtools.ksp") version "2.1.21-2.0.1" apply false
+    id("androidx.navigation.safeargs.kotlin") version "2.9.0" apply false
+    id ("com.android.library") version "7.2.2" apply false
 }
 
 buildscript {
@@ -11,9 +13,7 @@ buildscript {
         google()
     }
     dependencies {
-        val nav_version = "2.8.9"
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.9.0")
         classpath("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
     }
 }
-

@@ -131,6 +131,12 @@
             android:layout_height="wrap_content"
             android:text="Активность с тестом сохранений файлов"/>
 
+        <Button
+            android:id="@+id/btnToRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Активность с сохранением данных в базу данных при помощи Room"/>
+
     </LinearLayout>
 </ScrollView>
 

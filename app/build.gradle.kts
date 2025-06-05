@@ -40,8 +40,8 @@ android {
 
 
 //    Добавленное мной
-    viewBinding{enable = true} //Для binding
-    dataBinding {enable = true} //Не помню
+    viewBinding { enable = true } //Для binding
+    dataBinding { enable = true } //Не помню
     buildFeatures { //Для передачи сложных данным между активностями
         compose = true
         viewBinding = true
@@ -53,6 +53,17 @@ dependencies {
     implementation("androidx.room:room-runtime:2.7.1")
     ksp("androidx.room:room-compiler:2.7.1")
     implementation("androidx.room:room-ktx:2.7.1")
+
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.1.0")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

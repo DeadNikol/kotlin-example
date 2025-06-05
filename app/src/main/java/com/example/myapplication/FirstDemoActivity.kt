@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.NavActivityVersion2.NavigationActivity2
+import com.example.myapplication.Room.RoomActivity
 import com.example.myapplication.databinding.ActivityFirstDemoBinding
 import kotlinx.parcelize.Parcelize
 
-class FirstDemoActivity: AppCompatActivity() {
+class FirstDemoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFirstDemoBinding
     private val TAG = "condition"
     private lateinit var mainActivityViewModel: MainActivityViewModel //Этот класс нужен для сохранения данных по время работы приложения, а так же он нужен для наблюдателя
@@ -49,34 +50,44 @@ class FirstDemoActivity: AppCompatActivity() {
         binding = ActivityFirstDemoBinding.inflate(layoutInflater)
 
         val viewModelProvider = ViewModelProvider(this) //Проводник между классом и этой активностью
-        mainActivityViewModel = viewModelProvider[MainActivityViewModel::class.java] //Явно указываем класс
+        mainActivityViewModel =
+            viewModelProvider[MainActivityViewModel::class.java] //Явно указываем класс
 
-        val sharedPreferences = getSharedPreferences("user_preferences", Context.MODE_PRIVATE) //Переменная, отвечающая за локальное хранилище
+        val sharedPreferences = getSharedPreferences(
+            "user_preferences",
+            Context.MODE_PRIVATE
+        ) //Переменная, отвечающая за локальное хранилище
 
 
 
-        binding.etOne?.setText(sharedPreferences.getString("notify", "Либо ты всё знаешь, либо не записал, либо всё сломалось")) //Подсасываем строку из хранилища
+        binding.etOne?.setText(
+            sharedPreferences.getString(
+                "notify",
+                "Либо ты всё знаешь, либо не записал, либо всё сломалось"
+            )
+        ) //Подсасываем строку из хранилища
         setContentView(binding.root)
-
 
 
 //        val t = Toast.makeText(this,"I am toast", Toast.LENGTH_SHORT)
 //        t.show()
 
-        mainActivityViewModel.getEditTextFromFirstDemoActivity().observe(this@FirstDemoActivity){ //Вешаем наблюдателя, что бы следил за изменениями строки
-            val editor = sharedPreferences.edit() //Создаём объект редактора
-            editor.putString("notify", binding.etOne?.text.toString()) //Вставляем новую строку
-            editor.apply() //Применяем изменнения
-        }
-        binding.etOne?.addTextChangedListener{ //Если текст изменился...
+        mainActivityViewModel.getEditTextFromFirstDemoActivity()
+            .observe(this@FirstDemoActivity) { //Вешаем наблюдателя, что бы следил за изменениями строки
+                val editor = sharedPreferences.edit() //Создаём объект редактора
+                editor.putString("notify", binding.etOne?.text.toString()) //Вставляем новую строку
+                editor.apply() //Применяем изменнения
+            }
+        binding.etOne?.addTextChangedListener { //Если текст изменился...
 
-            mainActivityViewModel.getEditTextFromFirstDemoActivity().value = it.toString() //...меняем объект, на котором висит наблюдатель
+            mainActivityViewModel.getEditTextFromFirstDemoActivity().value =
+                it.toString() //...меняем объект, на котором висит наблюдатель
         }
 
         val word = extraWord("Galaxy", "Галактика")
 
 
-        with(binding){
+        with(binding) {
             btnOpenSecond?.setOnClickListener {
                 val intent = Intent(this@FirstDemoActivity, SecondDemoActivity::class.java)
                 intent.putExtra("EXTRA_KEY_TEXT", "don't panic")
@@ -102,7 +113,9 @@ class FirstDemoActivity: AppCompatActivity() {
                 startActivity(intent)
             }
             textView3?.setOnTouchListener { _, motionEvent ->
-                if(motionEvent.action == MotionEvent.ACTION_DOWN){startActivity(Intent(this@FirstDemoActivity, PhotoActivity::class.java))}
+                if (motionEvent.action == MotionEvent.ACTION_DOWN) {
+                    startActivity(Intent(this@FirstDemoActivity, PhotoActivity::class.java))
+                }
                 true
             }
             btnOpenThird?.setOnClickListener {
@@ -133,7 +146,7 @@ class FirstDemoActivity: AppCompatActivity() {
             btnToService?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, ServiceActivity::class.java))
             }
-            btnToGetLocation?.setOnClickListener{
+            btnToGetLocation?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, GeoLocationActivity::class.java))
             }
             btnToBroadcastReceiver?.setOnClickListener {
@@ -142,8 +155,13 @@ class FirstDemoActivity: AppCompatActivity() {
             btnToInnerService?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, InnerSensorsActivity::class.java))
             }
-            btnToEnvironmentalMonitoring?.setOnClickListener{
-                startActivity(Intent(this@FirstDemoActivity, EnvironmentalMonitoringActivity::class.java))
+            btnToEnvironmentalMonitoring?.setOnClickListener {
+                startActivity(
+                    Intent(
+                        this@FirstDemoActivity,
+                        EnvironmentalMonitoringActivity::class.java
+                    )
+                )
             }
             btnToNavGraph?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, MyNavigationActivity::class.java))
@@ -160,6 +178,11 @@ class FirstDemoActivity: AppCompatActivity() {
             btnToSaveDataInDownloads?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, SaveDataOnAndroidActivity::class.java))
             }
+
+            btnToRoom?.setOnClickListener {
+                startActivity(Intent(this@FirstDemoActivity, RoomActivity::class.java))
+            }
+
 
         }
 
@@ -209,5 +232,5 @@ class FirstDemoActivity: AppCompatActivity() {
         val original: String,
         val translate: String,
         var learned: Boolean = false,
-    ): Parcelable
+    ) : Parcelable
 }

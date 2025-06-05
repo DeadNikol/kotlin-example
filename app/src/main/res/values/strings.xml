@@ -1,24 +1,23 @@
 <resources>
     <string name="button_continue">Continue</string>
     <string name="galaxy">Galaxy</string>
-    <string name="option_destroy" translatable="false">Сломать</string>
-    <string name="option_galaxy" translatable="false">Галактика</string>
-    <string name="option_utug" translatable="false">Утюг</string>
-    <string name="option_sleep" translatable="false">Сон</string>
+    <string name="option_destroy">Сломать</string>
+    <string name="option_galaxy">Галактика</string>
+    <string name="option_utug">Утюг</string>
+    <string name="option_sleep">Сон</string>
     <string name="counter" translatable="false">0</string>
     <string name="thousand">Card game "Thousand"</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="app_name">All function test</string>
-    <string name="title_activity_thousand_with_jetpack_compose">ThousandActivityWithJetpackCompose
+    <string name="title_activity_thousand_with_jetpack_compose" translatable="false">ThousandActivityWithJetpackCompose
     </string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
 
-    <string name="lorem_ipsum">
+    <string name="lorem_ipsum" translatable="false">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
         dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
@@ -54,18 +53,18 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
-    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_nav_drawer" translatable="false">NavDrawerActivity</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="title_activity_tabbed_test">TabbedTestActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="menu_home" translatable="false">Home</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="title_activity_tabbed_test" translatable="false">TabbedTestActivity</string>
+    <string name="tab_text_1" translatable="false">Tab 1</string>
+    <string name="tab_text_2" translatable="false">Tab 2</string>
 </resources>
