@@ -29,6 +29,7 @@ class NavigationActivity2 : AppCompatActivity() {
         host =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView3) as NavHostFragment
         navController = host.navController
+
         //Включаем боковое меню
         val sideBar = binding.navViewVersion2 //Объект боковой менюшки
         sideBar.setupWithNavController(navController)

@@ -39,6 +39,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/side_bar_menu_version_2"/>
+
 <!--Не работает вместе с боковым баром-->
 <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
 <!--        android:layout_width="wrap_content"-->

@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.CameraX.CameraXActivity
 import com.example.myapplication.NavActivityVersion2.NavigationActivity2
 import com.example.myapplication.Room.RoomActivity
 import com.example.myapplication.databinding.ActivityFirstDemoBinding
@@ -181,6 +182,10 @@ class FirstDemoActivity : AppCompatActivity() {
 
             btnToRoom?.setOnClickListener {
                 startActivity(Intent(this@FirstDemoActivity, RoomActivity::class.java))
+            }
+
+            btnToCameraX?.setOnClickListener{
+                startActivity(Intent(this@FirstDemoActivity, CameraXActivity::class.java))
             }
 
 
