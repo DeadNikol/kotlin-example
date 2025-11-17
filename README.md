@@ -1,0 +1,1 @@
+Стандартное создание активностей, переход между ними, фрагменты, Navigation Architecture Component (ToolBar, DrawerLayout(Боковая менюшка), BottomNavigationBar), SafeArgs, Room, работа с сенсорами телефона, работа с хранилищем SharedPreferences, RecycleView, FragmentDialog(Всплывающие окна), Уведомления, Сервисы
